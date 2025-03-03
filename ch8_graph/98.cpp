@@ -8,7 +8,7 @@
 
 using namespace std;
 
-const int M = 10e2*5+10;
+const int M = 1e2*5+10;
 
 struct edge
 {
@@ -20,6 +20,8 @@ struct edge
 vector<vector<int>> res;
 vector<int> path;
 bool flag[M];
+
+vector<vector<int>> graph(M+1,vector<int>(M+1,0));
 
 void dfs(int x,int y,int m){
     if(x == y){
@@ -37,6 +39,8 @@ void dfs(int x,int y,int m){
         }
     }
 }
+
+
 
 int main(){
 
